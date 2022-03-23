@@ -56,5 +56,33 @@ pip install imutils
 sudo nano /etc/dphys-swapfile
 sudo systemctl restart dphys-swapfile
 
-git clone
+git clone https://github.com/sacchinbhg/Face-detection-in-RPI.git
+```
+
+## Taking photos for dataset
+The first step after initial setup is to get images for our dataset. We need to first mention the name of the person who is getting there photos taken. We do this by opening the "headshots_picam.py" file and changing the name on the 5th line to the name of the person who is getting there photos taken.
+
+After this run the code inside the directory home/pi directory/facial_recognition/ :
+```bash
+python headshots_picam.py
+```
+
+Now press space to take picture and once you are done press the esc key to quit
+
+Repeat this process for as many people as you want
+
+## Training the dataset
+
+To train the dataset we use this command in the home/pi directory/facial_recognition/ directory:
+```bash
+python train_model.py
+```
+
+Wait for sometime to see the model train the data
+
+## Face Detection
+
+Finally we now can start the face detection. To run it use this command in the home/pi directory/facial_recognition/ directory:
+```bash
+python face_recq.py
 ```
