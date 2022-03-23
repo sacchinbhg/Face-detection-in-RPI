@@ -84,5 +84,5 @@ Wait for sometime to see the model train the data
 
 Finally we now can start the face detection. To run it use this command in the home/pi directory/facial_recognition/ directory:
 ```bash
-python face_recq.py
+python facial_req.py
 ```
